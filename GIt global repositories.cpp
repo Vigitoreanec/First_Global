@@ -23,10 +23,24 @@ vector init_vector(unsigned int size)
 	return mas;
 }
 
+void resizeUp_vector(vector* mas, unsigned int size)
+{
+	int* temp = new int[mas->size];
+	for (unsigned int i = 0; i < mas->size; i++)
+	{
+		temp[i] = mas->arr[i];
+	}
+	delete[] mas->arr;
+	mas->arr = new int[size];
+	for (unsigned int i = 0; i < mas->size; i++)
+		mas->arr[i] = temp[i];
+	delete[] temp;
+}
+
 int main()
 {
 	vector mas = init_vector(4);
-
-
+	
+	
 
 }
