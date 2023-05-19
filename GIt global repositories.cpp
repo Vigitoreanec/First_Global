@@ -34,6 +34,7 @@ void resizeUp_vector(vector* mas, unsigned int size)
 	mas->arr = new int[size];
 	for (unsigned int i = 0; i < mas->size; i++)
 		mas->arr[i] = temp[i];
+	mas->size += 1;
 	delete[] temp;
 }
 
